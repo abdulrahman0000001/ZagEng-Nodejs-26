@@ -351,5 +351,6 @@ Specifies that an input field must be filled out before submitting the form.
 </form>
 ```
 ## Projects
-[Project 1](./HTML/projects/project1.html)
-[Project 2](./HTML/projects/project2.html)
+[Project 1](https://github.com/abdulrahman0000001/HTML/blob/main/projects/project1.html)
+<br>
+[Project 2](https://github.com/abdulrahman0000001/HTML/blob/main/projects/project2.html)
