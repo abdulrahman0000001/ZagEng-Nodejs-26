@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Product Search</title>
+    <style>
+      :root{--bg:#f7f8fb;--card:#ffffff;--primary:#3b82f6;--danger:#f87171;--secondary:#64748b}
+      html,body{height:100%}
+      body{
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        font-size:16px;
+        line-height:1.4;
+        color:#1f2937;
+        background:var(--bg);
+        padding:24px;
+        -webkit-font-smoothing:antialiased;
+      }
+      h2{font-size:1.5rem;margin:0 0 12px}
+      input[type="text"]{
+        height:44px;
+        padding:8px 12px;
+        border:1px solid #d1d5db;
+        border-radius:8px;
+        font-size:15px;
+        margin-right:8px;
+        box-sizing:border-box;
+        background:#fff;
+        width:400px;
+      }
+      #products{
+        list-style:none;
+        margin-top:16px;
+        padding:12px;
+        background:var(--card);
+        border-radius:8px;
+        box-shadow:0 1px 4px rgba(16,24,40,0.05);
+        max-width:800px;
+      }
+      li{
+        padding:16px;
+        margin:8px 0;
+        background:#f3f4f6;
+        border-radius:6px;
+        border-left:4px solid var(--primary);
+      }
+      li:hover{background:#e5e7eb}
+      li .name{
+        font-weight:600;
+        color:#1f2937;
+      }
+      li .price{
+        color:var(--primary);
+        font-weight:500;
+        margin-top:4px;
+      }
+      li .category{
+        color:var(--secondary);
+        font-size:13px;
+        margin-top:4px;
+      }
+      #noResults{
+        margin-top:16px;
+        padding:24px;
+        background:var(--card);
+        border-radius:8px;
+        border:2px solid var(--danger);
+        color:var(--danger);
+        text-align:center;
+        font-weight:500;
+        max-width:800px;
+      }
+      @media (max-width:600px){
+        input[type="text"]{width:100%;margin:6px 0}
+      }
+    </style>
+  </head>
+  <body onload="displayProducts()">
+    <h2>Product Search</h2>
+    <input id="searchInput" type="text" placeholder="Search products..." onkeyup="searchProducts(this.value)">
+    <ul id="products"></ul>
+    <div id="noResults"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
